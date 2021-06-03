@@ -5,8 +5,12 @@ const fetchBreedDescription = function(breedName, callback) {
     if (error) {
       callback(error);
     } else {
-      const data = JSON.parse(body);
-      // console.log(data);
+      const stringified = JSON.stringify(body);
+      const data = JSON.parse(stringified)
+      // var stringified = JSON.stringify(data);
+      // const parsedObj  = JSON.parse(stringified);
+      //console.log(parsedObj );
+      console.log(data);
       // console.log(typeof data);
     }
   });
